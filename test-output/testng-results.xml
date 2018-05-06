@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8352" started-at="2018-04-29T04:50:43Z" finished-at="2018-04-29T04:50:51Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8352" started-at="2018-04-29T04:50:43Z" finished-at="2018-04-29T04:50:51Z">
+      <class name="com.demo.webdriver.webpageActions.WebPageActions">
+        <test-method status="PASS" signature="launchdriver()[pri:0, instance:com.demo.webdriver.webpageActions.WebPageActions@3c0ecd4b]" name="launchdriver" duration-ms="8326" started-at="2018-04-29T10:20:43Z" finished-at="2018-04-29T10:20:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchdriver -->
+      </class> <!-- com.demo.webdriver.webpageActions.WebPageActions -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
