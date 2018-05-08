@@ -120,7 +120,7 @@ public class FileUpload {
 		pimMenu=driver.findElement(By.xpath("//a[@id='menu_pim_viewPimModule']/b"));
 		pimMenu.click();
 		Actions builder = new Actions(driver);
-		builder.moveToElement( pimMenu ).perform();
+		//builder.moveToElement( pimMenu ).perform();
 		AddEmployee=driver.findElement(By.linkText("Add Employee"));
 		builder.moveToElement( AddEmployee ).perform();;
 		builder.click(AddEmployee).perform();

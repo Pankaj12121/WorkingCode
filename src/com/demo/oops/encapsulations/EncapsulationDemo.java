@@ -1,6 +1,4 @@
 package com.demo.oops.encapsulations;
-
-
 public class EncapsulationDemo {
 	private	int balance =100000;
 	private String customerName="vishal";

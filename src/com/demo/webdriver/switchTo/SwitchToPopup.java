@@ -11,9 +11,9 @@ public class SwitchToPopup {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "\\Grid\\chromedriver.exe");
 		driver = new ChromeDriver();
-		String baseUrl = "https://zeropay.transactiongateway.com/";
+		String baseUrl = "https://wss.mahadiscom.in/wss/wss?uiActionName=getCustAccountLogin";
 		driver.get(baseUrl);
-		WebElement okButton = driver.findElement(By.id("merchant_login_submit_button"));
+		WebElement okButton = driver.findElement(By.id("lblLoginButton"));
 		okButton.click();
 		String alertMsg = acceptAlert();
 		System.out.println(alertMsg);
