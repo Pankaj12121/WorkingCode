@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.demo.webdriver.webpageActions.ReadTooltip">
+      <class name="com.demo.testNG.DP.DataProviderWithExcel">
         <methods>
-          <include name="launchdriver"/>
+          <include name="beforeMethod"/>
+          <include name="f" invocation-numbers="0"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.demo.webdriver.webpageActions.ReadTooltip -->
+      </class> <!-- com.demo.testNG.DP.DataProviderWithExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

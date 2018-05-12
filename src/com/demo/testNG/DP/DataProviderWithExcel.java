@@ -70,10 +70,10 @@ public class DataProviderWithExcel {
 	public Object[][] TC001DP() throws Exception{
 		getConfigProperties();
 		// Setting up the Test Data Excel file
-		ExcelUtils.setExcelFile("D:\\demoTestData\\LoginData.xls","Sheet1");
-		sTestCaseName = configProp.getProperty("testCaseName");
+		ExcelUtils.setExcelFile("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1");
+		sTestCaseName = configProp.getProperty("TC001");
 		iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
-		Object[][] testObjArray = ExcelUtils.getTableArray("D:\\demoTestData\\LoginData.xls","Sheet1",iTestCaseRow);
+		Object[][] testObjArray = ExcelUtils.getTableArray("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1",iTestCaseRow);
 		System.out.println("Data provider fetched the data from excel for testCase "+ sTestCaseName);
 		return testObjArray;
 	}
