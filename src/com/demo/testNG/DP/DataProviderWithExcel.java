@@ -25,7 +25,7 @@ public class DataProviderWithExcel {
 	WebDriver driver;
 	Properties configProp;
 	FileInputStream configInput;
-
+	ExcelUtils excelUtils = new ExcelUtils();
 	public Properties getConfigProperties() throws FileNotFoundException, IOException {
 		if (configProp==null) {
 			configProp = new Properties();
@@ -70,10 +70,10 @@ public class DataProviderWithExcel {
 	public Object[][] TC001DP() throws Exception{
 		getConfigProperties();
 		// Setting up the Test Data Excel file
-		ExcelUtils.setExcelFile("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1");
-		sTestCaseName = configProp.getProperty("TC001");
-		iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
-		Object[][] testObjArray = ExcelUtils.getTableArray("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1",iTestCaseRow);
+		//ExcelUtils.setExcelFile("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1");
+		//sTestCaseName = configProp.getProperty("TCID");
+		//iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
+		Object[][] testObjArray = excelUtils.getTableArray("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1");
 		System.out.println("Data provider fetched the data from excel for testCase "+ sTestCaseName);
 		return testObjArray;
 	}

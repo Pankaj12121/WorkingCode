@@ -2,50 +2,39 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10694" started-at="2018-05-09T11:53:51Z" finished-at="2018-05-09T11:54:02Z">
+  <suite name="Default suite" duration-ms="864" started-at="2018-05-25T13:09:15Z" finished-at="2018-05-25T13:09:16Z">
     <groups>
       <group name="dataProviderWithExcel">
-        <method signature="DataProviderWithExcel.f([Ljava.lang.String;)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
+        <method signature="DataProviderWithExcel.f(java.util.ArrayList)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
       </group> <!-- dataProviderWithExcel -->
       <group name="TestNG">
-        <method signature="DataProviderWithExcel.f([Ljava.lang.String;)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
+        <method signature="DataProviderWithExcel.f(java.util.ArrayList)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
       </group> <!-- TestNG -->
       <group name="TC008">
-        <method signature="DataProviderWithExcel.f([Ljava.lang.String;)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
+        <method signature="DataProviderWithExcel.f(java.util.ArrayList)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
       </group> <!-- TC008 -->
       <group name="demo">
-        <method signature="DataProviderWithExcel.f([Ljava.lang.String;)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
+        <method signature="DataProviderWithExcel.f(java.util.ArrayList)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" class="com.demo.testNG.DP.DataProviderWithExcel"/>
       </group> <!-- demo -->
     </groups>
-    <test name="Default test" duration-ms="10694" started-at="2018-05-09T11:53:51Z" finished-at="2018-05-09T11:54:02Z">
+    <test name="Default test" duration-ms="864" started-at="2018-05-25T13:09:15Z" finished-at="2018-05-25T13:09:16Z">
       <class name="com.demo.testNG.DP.DataProviderWithExcel">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="beforeMethod" is-config="true" duration-ms="8251" started-at="2018-05-09T17:23:52Z" finished-at="2018-05-09T17:24:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="f([Ljava.lang.String;)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" duration-ms="963" started-at="2018-05-09T17:24:00Z" data-provider="TC001DP" finished-at="2018-05-09T17:24:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@207b8649]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
+        <test-method status="FAIL" signature="f(java.util.ArrayList)[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="f" duration-ms="832" started-at="2018-05-25T18:39:15Z" data-provider="TC001DP" finished-at="2018-05-25T18:39:16Z">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
             <message>
-              <![CDATA[3]]>
+              <![CDATA[
+Data provider mismatch
+Method: f([Parameter{index=0, type=java.util.ArrayList, declaredAnnotations=[]}])
+Arguments: [([Ljava.lang.Object;)[Ljava.lang.Object;@140c9f39]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 3
-	at com.demo.testNG.DP.DataProviderWithExcel.f(DataProviderWithExcel.java:58)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+Data provider mismatch
+Method: f([Parameter{index=0, type=java.util.ArrayList, declaredAnnotations=[]}])
+Arguments: [([Ljava.lang.Object;)[Ljava.lang.Object;@140c9f39]
+	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:49)
+	at org.testng.internal.Invoker.injectParameters(Invoker.java:1293)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1187)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.privateRun(TestRunner.java:744)
@@ -65,14 +54,10 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.demo.testNG.DP.DataProviderWithExcel@f6c48ac]" name="afterMethod" is-config="true" duration-ms="737" started-at="2018-05-09T17:24:01Z" finished-at="2018-05-09T17:24:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
       </class> <!-- com.demo.testNG.DP.DataProviderWithExcel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -6,7 +6,7 @@
       <class name="com.demo.testNG.DP.DataProviderWithExcel">
         <methods>
           <include name="beforeMethod"/>
-          <include name="f" invocation-numbers="0"/>
+          <include name="f"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.demo.testNG.DP.DataProviderWithExcel -->

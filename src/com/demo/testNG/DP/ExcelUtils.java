@@ -18,6 +18,15 @@ public class ExcelUtils {
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFCell Cell;
 	private static XSSFRow Row;
+	ExcelUtils excelUtils;
+	int CR=0;
+	int CC=0;
+	//Object[][] tabArray;
+	Object[][]tabArray= new Object [CR][CC];
+	
+	
+	
+	
 	//This method is to set the File path and to open the Excel file, Pass Excel Path and SheetName as Arguments to this method
 	public static void setExcelFile(String Path,String SheetName) throws Exception {
 		try {
@@ -29,26 +38,41 @@ public class ExcelUtils {
 			throw (e);
 		}
 	}
-	public static Object[][] getTableArray(String FilePath, String SheetName, int iTestCaseRow) throws Exception
-	{   
-		String[][] tabArray = null;
+	public  Object[][] getTableArray(String FilePath, String SheetName) throws Exception{
+	excelUtils = new ExcelUtils();
+	
+		
 		try{
 			FileInputStream ExcelFile = new FileInputStream(FilePath);
 			// Access the required test data sheet
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
 			ExcelWSheet = ExcelWBook.getSheet(SheetName);
-			Row=ExcelWSheet.getRow(iTestCaseRow);
-			int rowNumbers=Row.getRowNum();
-			int startCol = rowNumbers;
-			int ci=0,cj=0;
-			int totalRows =1; //ExcelWSheet.getPhysicalNumberOfRows();
-			int totalCols = Row.getPhysicalNumberOfCells();
-			tabArray=new String[totalRows][totalCols];
-			for (int j=startCol;j<=totalCols;j++, cj++)
-			{
-				tabArray[ci][cj]=getCellData(iTestCaseRow,j);
-				//System.out.println(tabArray[ci][cj]);
+			int numOfRows=ExcelWSheet.getPhysicalNumberOfRows();
+			
+			//int rowNumbers=Row.getRowNum();
+			//int startCol = rowNumbers;
+			
+			//int totalRows =1; //ExcelWSheet.getPhysicalNumberOfRows();
+			
+			//tabArray=new String[ci][cj];
+			for (int i= 1;i<=numOfRows-1;i++){
+				XSSFRow currentRow=ExcelWSheet.getRow(i);
+				int totalCols = currentRow.getPhysicalNumberOfCells();
+				String TCID= currentRow.getCell(0).toString();
+				if (i==1)
+				tabArray= new Object [numOfRows][totalCols];
+				for (int j=0;j<=totalCols-1;j++)
+				{
+					
+					tabArray[i-1][j]=getCellData(i,j);
+					
+					//System.out.println(tabArray[ci][cj]);
+
+					
+				}
+			
 			}
+			System.out.println(tabArray);
 		}
 		catch (FileNotFoundException e)
 		{
@@ -63,9 +87,9 @@ public class ExcelUtils {
 		return(tabArray);
 	}
 	//This method is to read the test data from the Excel cell, in this we are passing parameters as Row num and Col num
-	public static String getCellData(int RowNum, int ColNum) throws Exception{
+	public String getCellData(int rownum,int ColNum) throws Exception{
 		try{
-			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
+			Cell = ExcelWSheet.getRow(rownum).getCell(ColNum);
 			String CellData = Cell.getStringCellValue();
 			return CellData;
 		}catch (Exception e){
@@ -84,12 +108,12 @@ public class ExcelUtils {
 			throw (e);
 		}
 	}
-	public static int getRowContains(String sTestCaseName, int colNum) throws Exception{
+	public  int getRowContains(String sTestCaseName, int colNum) throws Exception{
 		int i;
 		try {
 			int rowCount = ExcelUtils.getRowUsed();
 			for ( i=0 ; i<rowCount; i++){
-				if  (ExcelUtils.getCellData(i,colNum).equalsIgnoreCase(sTestCaseName)){
+				if  (excelUtils.getCellData(i,colNum).equalsIgnoreCase(sTestCaseName)){
 					System.out.println("The test case "+sTestCaseName+" present in the excel sheet");
 					break;
 				}
