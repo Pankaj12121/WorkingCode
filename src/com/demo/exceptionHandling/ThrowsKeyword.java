@@ -9,14 +9,14 @@ public class ThrowsKeyword {
 	public void n()throws IOException{  
 		m();  
 	}  
-	public void p(){  
+	public void p() throws IOException{  
 		try{  
 			n();  
 		}catch(Exception e){
 			System.out.println("exception handled");
 		}  
 	}  
-	public static void main(String args[]){  
+	public static void main(String args[]) throws IOException{  
 		ThrowsKeyword obj=new ThrowsKeyword();  
 		obj.p();  
 		System.out.println("normal flow...");  

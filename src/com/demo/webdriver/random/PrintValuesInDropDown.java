@@ -16,7 +16,7 @@ public class PrintValuesInDropDown {
 		driver.get("http://www.makemytrip.com/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//span[input[@tabindex='4']]//a")).click();
-		List<WebElement> cities = driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
+		List<WebElement> cities = driver.findElement(By.xpath("//li[@class='ui-menu-item']"));
 		System.out.println("Number of cities : "+cities.size()); //this will take only those which are visible in 1st click
 		for(int i=0; i<cities.size(); i++){
 			System.out.println(i+1+") city name: "+cities.get(i).getText());

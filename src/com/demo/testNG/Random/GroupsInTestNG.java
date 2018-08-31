@@ -14,7 +14,7 @@ public class GroupsInTestNG {
 		System.out.println("executeAfter firstGroup");
 	}
 
-	@Test(groups="firstGroup")
+	@Test(groups="sanity")
 	public void method1(){
 		System.out.println("method1");
 	}

@@ -5,18 +5,23 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class HashMaPExample {
 
 	public static void main(String args[]) {
+		WebDriver driver =new ChromeDriver();
 		Map<String, Integer> certificationCost = new HashMap<>(); 
 		certificationCost.put("ISTQB", 7000); 
 		certificationCost.put("CSTE", 11000); 
 		certificationCost.put("ocjp", 18000);
 		certificationCost.put("NSE", 2000); 
-		certificationCost.put("Agile", 16000); // let's try to remove element from Hashmap using Map.remove(Object key) method // this will not work, will throw ConcurrentModfiicationException 
+		certificationCost.put("Agile", 16000);
+		// let's try to remove element from Hashmap using Map.remove(Object key) method // this will not work, will throw ConcurrentModfiicationException 
 		Set<String> setOfCertifications = certificationCost.keySet(); 
 		// Map - before removing a mapping System.out.println("before: " + certificationCost); // let's use Iterator to remove a key from HashMap while iterating 
-		Iterator<String> iterator = certificationCost.keySet().iterator(); 
+		Iterator<String> iterator = setOfCertifications.iterator();//certificationCost.keySet().iterator(); 
 		while(iterator.hasNext()){ 
 			String certification = iterator.next(); 
 			if(certification.contains("OCMJEA")){ 

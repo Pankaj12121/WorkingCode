@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class MethodOverriding {
 
-	public void msg(){
+	public void msg() throws IOException{
 		System.out.println("parent");
 	}  
 }  
@@ -13,7 +13,7 @@ class TestExceptionChild extends MethodOverriding{
 	public void msg()throws IOException{  
 		System.out.println("TestExceptionChild");  
 	}  
-	public static void main(String args[]){  
+	public static void main(String args[]) throws IOException{  
 		MethodOverriding p=new TestExceptionChild();  
 		p.msg();  
 	}  

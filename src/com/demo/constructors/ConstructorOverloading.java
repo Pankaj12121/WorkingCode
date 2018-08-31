@@ -14,7 +14,7 @@ public class ConstructorOverloading {
 	    public ConstructorOverloading(int i, int j){
 	        System.out.println("Inside double parameter constructor");
 	    }
-	     
+	   
 	    public static void main(String a[]){
 	    	ConstructorOverloading mco = new ConstructorOverloading();
 	    	ConstructorOverloading spmco = new ConstructorOverloading(10);

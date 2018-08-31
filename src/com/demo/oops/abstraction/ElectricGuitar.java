@@ -1,8 +1,10 @@
 
 package com.demo.oops.abstraction;
 
-public class ElectricGuitar extends StringInstrument{
+import org.openqa.selenium.WebElement;
 
+public class ElectricGuitar extends StringInstrument{
+	WebElement ele;
 	public ElectricGuitar() {
 		super();
 		this.name = "Guitar";
@@ -15,6 +17,7 @@ public class ElectricGuitar extends StringInstrument{
 	}
 	@Override
 	public void play() {
+
 		System.out.println("An electric " + numberOfStrings + "-string " + name
 				+ " is rocking!");
 	}

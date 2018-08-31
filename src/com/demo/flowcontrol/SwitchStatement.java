@@ -1,7 +1,9 @@
 package com.demo.flowcontrol;
 
 public class SwitchStatement {
+	public enum days{monday,tuesday}
 	public static void main(String[] args) {
+		
 		for (int i = 0; i <= 2; i++) {
 			// Switch on number.
 			switch (i) {
@@ -12,7 +14,7 @@ public class SwitchStatement {
 			case 2:
 			case 3: {
 				System.out.println("Two or three: " + i);
-				break;
+				//break;
 			}
 			default: {
 				System.out.println("Default case: " + i);

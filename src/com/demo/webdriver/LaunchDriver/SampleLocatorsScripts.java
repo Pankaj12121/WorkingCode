@@ -1,4 +1,4 @@
-package com.demo.webdriver.LaunchDriver;
+package com.demo.webdriver.launchDriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

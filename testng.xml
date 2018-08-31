@@ -4,6 +4,10 @@
 	<test name="Test">
 		<parameter name="UserName" value="Admin" />
 		<parameter name="Password" value="admin" />
+		<parameter name="appURL" value="https://www.quora.com/" />
+		<parameter name="appURL1" value="https://docs.seleniumhq.org/download/" />
+		<parameter name="appURL2" value="http://newtours.demoaut.com/" />
+		<parameter name="appURL3" value="https://www.yahoo.com/" />
 		<packages>
 			<package name="com.demo.*" />
 		</packages>

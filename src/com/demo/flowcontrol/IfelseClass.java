@@ -11,7 +11,7 @@ public class IfelseClass {
 		
 		if(isNumber)
 			System.out.println("It's a number");
-
+		
 		if(negativeNumber < 0)
 		{
 			System.out.println("It's a negative one! Change it.");
@@ -37,7 +37,8 @@ public class IfelseClass {
 
 	
 	/*****************************************elseif condition***********************************/	
-		 
+
+	
       if (number > 0) {
          System.out.println("Number is positive.");
       }

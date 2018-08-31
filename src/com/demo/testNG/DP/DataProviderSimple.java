@@ -1,5 +1,6 @@
 package com.demo.testNG.DP;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,9 +14,8 @@ public class DataProviderSimple {
 	WebElement userName;
 	WebElement password;
 	WebElement submit;
-
+	
 	@DataProvider(name = "Authentication")
-
 	public static Object[][] credentials() {
 
 		// The number of times data is repeated, test will be executed the same no. of times

@@ -3,7 +3,8 @@ package com.demo.variables;
 public class StaticVariables {
 	int rollno;  
 	String name;  
-	static String college ="ITS";  
+	static String college ="ITS"; 
+	
 
 	public StaticVariables(int r,String n){  
 		rollno = r;  
@@ -12,7 +13,8 @@ public class StaticVariables {
 	public void display (String collegeName){
 		college=college+collegeName;
 		System.out.println(rollno+" "+name+" "+collegeName);
-	}  
+	} 
+	 
 	public void display (){	
 		System.out.println(rollno+" "+name+" "+college);
 	}  

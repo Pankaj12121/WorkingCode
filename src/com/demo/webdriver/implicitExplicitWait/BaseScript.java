@@ -1,5 +1,7 @@
 package com.demo.webdriver.implicitExplicitWait;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -11,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -40,7 +43,7 @@ public class BaseScript {
 		System.out.println(watch);
 		//baseObject.closeSession();
 	}
-	public void launchDriver(){
+	public void launchDriver() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 
@@ -55,7 +58,8 @@ public class BaseScript {
 		driver = new ChromeDriver(capabilities);
 		/*******************************Implicit Wait*************************************************/		
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		/*******************************Implicit Wait*************************************************/		
+		/*******************************Implicit Wait*************************************************/	
+
 		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
 		driver.get(baseUrl);
 	}
@@ -78,9 +82,9 @@ public class BaseScript {
 		System.out.println("The landing page URL : "+landingUrL);
 		System.out.println("The base page Title : "+startTitle);
 		System.out.println("The Landing page Title : "+landingTitle);
-		
+
 	}
-	public boolean verifyLandingPage(){
+	public boolean verifyLandingPage() {
 		try{
 			By by=By.xpath("//a[text()='Welcome Admin']");
 			/*******************************Explicit Wait*************************************************/		
@@ -93,6 +97,8 @@ public class BaseScript {
 					System.out.println("Login Unsuccessful...");
 
 				}
+			
+	
 		}catch(Exception e){
 			System.out.println("The element'WelCome Admin' could not find on web page");
 
@@ -124,16 +130,16 @@ public class BaseScript {
 	}
 
 	public void actionClick(By Level1,By Level2,By Level3) throws InterruptedException{
-			WebElement level1=driver.findElement(Level1);
-			Actions builder = new Actions(driver);
-			builder.moveToElement( level1 ).perform();
-			WebElement level2=driver.findElement(Level2);
-			builder.moveToElement( level2 ).perform();;
-			WebElement level3=driver.findElement(Level3);
-			builder.click(level3).perform();
-			//builder.build().perform();
-			System.out.println("Mouseover and click successful on menu "+level3.toString());
-		
+		WebElement level1=driver.findElement(Level1);
+		Actions builder = new Actions(driver);
+		builder.moveToElement( level1 ).perform();
+		WebElement level2=driver.findElement(Level2);
+		builder.moveToElement( level2 ).perform();;
+		WebElement level3=driver.findElement(Level3);
+		builder.click(level3).perform();
+		//builder.build().perform();
+		System.out.println("Mouseover and click successful on menu "+level3.toString());
+
 	}
 	public void actionClick(By Level1,By Level2) throws InterruptedException{
 		WebElement level1=driver.findElement(Level1);
@@ -144,8 +150,8 @@ public class BaseScript {
 		builder.click(level2).perform();
 		//builder.build().perform();
 		System.out.println("Mouseover and click successful on menu "+level2.toString());
-	
-}
+
+	}
 	public void actionClick(By Level1) throws InterruptedException{
 		WebElement level1=driver.findElement(Level1);
 		Actions builder = new Actions(driver);
@@ -153,8 +159,8 @@ public class BaseScript {
 		builder.click(level1).perform();
 		//builder.build().perform();
 		System.out.println("Mouseover and click successful on menu "+level1.toString());
-	
-}
+
+	}
 	public WebElement explicitWait(int waitTime,By by){
 		WebDriverWait webDriverWait = new WebDriverWait(driver, waitTime);
 		webDriverWait.pollingEvery(10, TimeUnit.MICROSECONDS);

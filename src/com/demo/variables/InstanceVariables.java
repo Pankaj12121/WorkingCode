@@ -1,6 +1,7 @@
 package com.demo.variables;
-public class InstanceVariables {
-	public String name;
+ public class InstanceVariables {
+	public  String name;
+	
 	// salary variable is visible in Student class only.
 	private int marks;
 
@@ -8,18 +9,20 @@ public class InstanceVariables {
 		this.name = StudName;	
 		
 	}
+	
 	public void setMarks(int studMarks) {
 		marks = studMarks;	
-		
 	}
 	public void printStud() {
 		System.out.println("Student name : " + name);
 		System.out.println("Marks :" + marks);
 	}
+	
 	public static void main(String args[]) {
-		InstanceVariables st = new InstanceVariables("John");
-		st.setMarks(85);;
-		st.printStud();
+		InstanceVariables obj = new InstanceVariables("John");
+		obj.setMarks(85);
+		obj.printStud();
+		System.out.println("main method executed");
 	}
 }
 

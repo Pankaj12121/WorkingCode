@@ -21,15 +21,15 @@ public class AssertVsVerify {
 		driver = new ChromeDriver();
 		Report("Driver Launched");
 		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
-		String expectedTitle = "OrangeHRM1";
+		String expectedTitle = "HR Management System | OrangeHRM l HR Management Software1";
 		String actualTitle = "";
-		String ExpectedWelcomeUser="Welcome Admin1";
+		String ExpectedWelcomeUser="Contact Us1";
 		driver.get(baseUrl);
 		Report("Navigated to"+baseUrl);
 		actualTitle = driver.getTitle();
-		login();
-		WebElement welcome= driver.findElement(By.linkText("Welcome Admin"));
-		String ActualWelcomeUser= welcome.getText();
+		//login();
+		WebElement contactUS= driver.findElement(By.xpath("//div[1]/ul/li/a"));
+		String ActualWelcomeUser= contactUS.getText();
 		try{
 			//verify(actualTitle, expectedTitle);
 
@@ -56,8 +56,10 @@ public class AssertVsVerify {
 
 		if (actualTitle.contentEquals(expectedTitle)){
 			Report("Test Passed!");
+			System.out.println("Checkpoint passed actual value is "+"'"+actualTitle+"'" +" and expected value is "+"'"+expectedTitle+"'");
 		} else {
 			Report("Test Failed");
+			System.out.println("Checkpoint Failed actual value is "+"'"+actualTitle+"'" +" and expected value is "+"'"+expectedTitle+"'");
 		}
 		Report("Verify continues the execution even if checkpoint get failed");
 
@@ -66,16 +68,19 @@ public class AssertVsVerify {
 	public void hardAssert(String actualTitle, String expectedTitle){
 
 		Assert.assertEquals(actualTitle, expectedTitle);
+		System.out.println("Checkpoint passed actual value is "+"'"+actualTitle+"'" +" and expected value is "+"'"+expectedTitle+"'");
 
 	}
 	public void softAssert(String actualTitle, String expectedTitle){
 		try{
 
 			Assert.assertEquals(actualTitle, expectedTitle);
+			System.out.println(actualTitle+" "+ expectedTitle);
+			
 
 		}catch(AssertionError e){
-
-			e.getMessage();
+			System.out.println(e.getMessage());
+			//e.printStackTrace();
 
 		}
 	}

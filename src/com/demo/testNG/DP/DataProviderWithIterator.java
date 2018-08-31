@@ -8,6 +8,7 @@ import java.util.Iterator;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -62,8 +63,8 @@ public class DataProviderWithIterator {
 	@DataProvider(name="DataInput")
 	public Iterator<Object[][]> fetchData() throws IOException{
 		ArrayList<Object[][]> myData = new ArrayList<Object[][]>();
-		FileInputStream fis = new FileInputStream("D:\\demoTestData\\LoginData.xls");
-		HSSFWorkbook wb = new HSSFWorkbook(fis);
+		FileInputStream fis = new FileInputStream("C:\\Users\\pankajs\\Desktop\\TestData.xlsx");
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		Sheet sh = wb.getSheet("Sheet1");
 		int numOfRows = sh.getPhysicalNumberOfRows();
 		String testCaseID,testCaseDisc,userName, pass, expTitle;

@@ -1,6 +1,8 @@
-package com.demo.webdriver.LaunchDriver;
+package com.demo.webdriver.launchDriver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -18,6 +20,13 @@ public class SampleFirefoxLaunch {
 		String actualTitle = "";
 		driver.get(baseUrl);
 		actualTitle = driver.getTitle();
+		WebElement userName= driver.findElement(By.id("txtUsername"));
+		WebElement password= driver.findElement(By.id("txtPassword"));
+		WebElement submit= driver.findElement(By.id("btnLogin"));
+		userName.sendKeys("Admin");
+		password.sendKeys("admin");
+		submit.click();
+		
 		if (actualTitle.contentEquals(expectedTitle)){
 			System.out.println("Test Passed!");
 		} else {

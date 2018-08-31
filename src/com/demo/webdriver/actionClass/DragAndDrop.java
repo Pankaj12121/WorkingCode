@@ -2,6 +2,7 @@ package com.demo.webdriver.actionClass;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.xalan.xsltc.DOM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -33,8 +34,7 @@ public class DragAndDrop {
 			System.out.println("Test case is failed");
 
 		}
-
-
+		
 	}
 
 	public static void dragAndDrop(WebElement sourceElement, WebElement destinationElement) {
