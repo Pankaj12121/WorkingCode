@@ -4,7 +4,7 @@ public class SwitchStatement {
 	public enum days{monday,tuesday}
 	public static void main(String[] args) {
 		
-		for (int i = 0; i <= 2; i++) {
+		for (int i = 0; i <= 4; i++) {
 			// Switch on number.
 			switch (i) {
 			case 1: {
@@ -12,6 +12,7 @@ public class SwitchStatement {
 				break;
 			}
 			case 2:
+				//break;
 			case 3: {
 				System.out.println("Two or three: " + i);
 				//break;

@@ -15,16 +15,16 @@ public class SampleFirefoxLaunch {
 		// declaration and instantiation of objects/variables
 		System.setProperty("webdriver.gecko.driver","\\Grid\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
-		String expectedTitle = "OrangeHRM1";
+		String baseUrl = "http://newtours.demoaut.com/index.php";
+		String expectedTitle = "Welcome: Mercury Tours";
 		String actualTitle = "";
 		driver.get(baseUrl);
 		actualTitle = driver.getTitle();
-		WebElement userName= driver.findElement(By.id("txtUsername"));
-		WebElement password= driver.findElement(By.id("txtPassword"));
-		WebElement submit= driver.findElement(By.id("btnLogin"));
-		userName.sendKeys("Admin");
-		password.sendKeys("admin");
+		WebElement userName= driver.findElement(By.name("userName"));
+		WebElement password= driver.findElement(By.name("password"));
+		WebElement submit= driver.findElement(By.name("login"));
+		userName.sendKeys("tutorial");
+		password.sendKeys("tutorial");
 		submit.click();
 		
 		if (actualTitle.contentEquals(expectedTitle)){
