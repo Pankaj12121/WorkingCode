@@ -10,17 +10,17 @@ import org.testng.annotations.Test;
 public class ParametersInTestNG {
 	String ActualErrMsg="";
 	@Test(groups={"TestNG","demo","TC001","parameters"})
-	@Parameters({"browsername","appURL"})
-	public void parameters(String browserNmae,String appURL) {
+	@Parameters({"password","Username"})
+	public void parameters(String password,String Username) {
 		
-		TestBaseSetup base= new TestBaseSetup();
+		/*TestBaseSetup base= new TestBaseSetup();
 		WebDriver driver = base.setDriver( browserNmae, appURL);
-		/*	System.out.println("The current browser is "+browserNmae);
+			System.out.println("The current browser is "+browserNmae);
 		System.out.println("the platform is "+platform);
 		System.setProperty("webdriver.chrome.driver","\\Grid\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
-		driver.get(baseUrl);*/
+		driver.get(baseUrl);
 		//driver.manage().window().maximize();//maximize browser
 
 		String ExpectedErrorMsg="Invalid credentials";
@@ -30,8 +30,8 @@ public class ParametersInTestNG {
 
 		userName.sendKeys("Admin");
 		password.sendKeys("admin");
-		submit.click();
-		try{
+		submit.click();*/
+		/*try{
 
 			WebElement errMsg= driver.findElement(By.xpath("//div[span='Invalid credentials']"));//By xpath
 			ActualErrMsg=errMsg.getText();
@@ -46,5 +46,5 @@ public class ParametersInTestNG {
 
 		driver.close();
 
-	}
-}
+	}*/
+}}

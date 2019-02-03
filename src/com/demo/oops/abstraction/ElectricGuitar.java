@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 public class ElectricGuitar extends StringInstrument{
 	WebElement ele;
 	public ElectricGuitar() {
-		super();
+		super("x");
 		this.name = "Guitar";
 		this.numberOfStrings = 6;
 	}

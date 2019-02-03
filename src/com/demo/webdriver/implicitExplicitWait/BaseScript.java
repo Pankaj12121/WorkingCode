@@ -63,6 +63,29 @@ public class BaseScript {
 		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
 		driver.get(baseUrl);
 	}
+	
+	public WebDriver launchDriverWithPara(String url) {
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+
+		Map<String, Object> prefs = new HashMap<String, Object>();
+		prefs.put("credentials_enable_service", false);
+		prefs.put("profile.password_manager_enabled", false);
+		options.setExperimentalOption("prefs", prefs);
+
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		System.setProperty("webdriver.chrome.driver","\\Grid\\chromedriver.exe");
+		driver = new ChromeDriver(capabilities);
+		/*******************************Implicit Wait*************************************************/		
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		/*******************************Implicit Wait*************************************************/	
+
+		String baseUrl = url;
+		driver.get(baseUrl);
+		return driver;
+	}
+
 
 	public void pageElements(){
 		userName= driver.findElement(By.id("txtUsername"));//By id 

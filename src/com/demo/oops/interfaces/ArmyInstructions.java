@@ -1,6 +1,6 @@
 package com.demo.oops.interfaces;
 
-public class ArmyInstructions implements Enemy,TestInterface,TestInterface1{
+public class ArmyInstructions implements Enemy{
 
 	@Override
 	public void speak() {

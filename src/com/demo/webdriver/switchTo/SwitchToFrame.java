@@ -23,7 +23,7 @@ public class SwitchToFrame {
 		Objswitchclass.defaulframeFirstTime();
 		
 		//SwitchTo Frame by index
-		Objswitchclass.switchToFramebyIndex(0);
+		Objswitchclass.switchToFramebyIndex(0); 
 
 		//Action in switched frame
 		Objswitchclass.actionInSwitchedFrame();

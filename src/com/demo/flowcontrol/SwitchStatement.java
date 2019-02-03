@@ -9,12 +9,14 @@ public class SwitchStatement {
 			switch (i) {
 			case 1: {
 				System.out.println("One: " + i);
-				break;
+			break;
 			}
-			case 2:
+			case 2:{
+				System.out.println("Two: " + i);
+			}
 			case 3: {
 				System.out.println("Two or three: " + i);
-				//break;
+			break;	
 			}
 			default: {
 				System.out.println("Default case: " + i);

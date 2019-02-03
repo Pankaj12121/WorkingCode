@@ -18,6 +18,7 @@ public class WithoutSendKeys {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://google.co.in");
 		WebElement element= driver.findElement(By.name("btnK"));
+		
 		((JavascriptExecutor)driver).executeScript("document.getElementById('lst-ib')."
 				+ "value='Jobs in selenium'");
 

@@ -1,16 +1,25 @@
-package com.demo.webdriver.launchDriver;
+package com.demo.webdriver.LaunchDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class SampleLocatorsScripts {
 	
 	static WebDriver driver ;
-	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver","\\Grid\\chromedriver.exe");
-		driver = new ChromeDriver();
+	public static void main(String[] args) throws MalformedURLException {
+		//System.setProperty("webdriver.chrome.driver","\\Grid\\chromedriver.exe");
+		//driver = new ChromeDriver();
+		DesiredCapabilities capability= new DesiredCapabilities().chrome();
+		String gridURL="http://localhost:4444/wd/hub";
+		
+		WebDriver driver = new RemoteWebDriver(new URL(gridURL),capability);
 		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
 		driver.get(baseUrl);
 		driver.manage().window().maximize();//maximize browser

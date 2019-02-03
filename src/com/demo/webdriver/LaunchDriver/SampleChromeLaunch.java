@@ -1,4 +1,4 @@
-package com.demo.webdriver.launchDriver;
+package com.demo.webdriver.LaunchDriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,17 +10,22 @@ public class SampleChromeLaunch {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver","\\Grid\\chromedriver.exe");
 		driver = new ChromeDriver();
-		String baseUrl = "http://newtours.demoaut.com/index.php";
+		String baseUrl = "https://www.myntra.com/";
 		String expectedTitle = "OrangeHRM1";
 		String actualTitle = "";
 		driver.get(baseUrl);
-		WebElement pass= driver.findElement(By.xpath("//form[@name='home']/table/tbody/tr[4]/td/table/tbody/tr[3]/td[1]/font"));
+		
+		WebElement search= driver.findElement(By.xpath("//div[@id='desktop-header-cnt']//input"));
+		search.sendKeys("kurta");
+		
+		WebElement username= driver.findElement(By.name("userName"));
+		WebElement pass= driver.findElement(By.name("password"));
 		String actualLablePasswordField=pass.getText();
 		String expectedLablePasswordField="password:";
-		WebElement username= driver.findElement(By.name("login"));
+		
 		username.sendKeys("tutorial");
 		//WebElement password= driver.findElement(By.xpath("//div/div[1]/div[4]/div[2]/div/div[1]"));
-		//password.sendKeys("tutorial");
+		pass.sendKeys("tutorial");
 		actualTitle = driver.getTitle();
 		if(actualLablePasswordField.equalsIgnoreCase(expectedLablePasswordField)){
 			System.out.println("Testcase passed with equaliqnore string method");

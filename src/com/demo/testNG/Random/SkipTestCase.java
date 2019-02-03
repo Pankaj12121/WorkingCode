@@ -8,7 +8,7 @@ public class SkipTestCase {
 		public void defaultEnabled(){
 			System.out.println("by default enabled=true");
 		}
-		@Test(enabled=true)
+		@Test()
 		public void trueEnabled(){
 			System.out.println("hard coded enabled=true");
 		}

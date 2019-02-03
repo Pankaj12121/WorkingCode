@@ -6,8 +6,8 @@ public class WithoutThisKeyword {
 	int b;
 
 	public WithoutThisKeyword(int a, int b){
-		this.a=a;
-		this.b=b;
+		a=a;
+		b=b;
 	}
 
 	public static void main(String[] args) {

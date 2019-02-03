@@ -13,8 +13,8 @@ public class SwitchToPopup {
 		driver = new ChromeDriver();
 		String baseUrl = "https://wss.mahadiscom.in/wss/wss?uiActionName=getCustAccountLogin";
 		driver.get(baseUrl);
-		WebElement okButton = driver.findElement(By.id("lblLoginButton"));
-		okButton.click();
+		WebElement LoginButton = driver.findElement(By.id("lblLoginButton"));
+		LoginButton.click();
 		String alertMsg = acceptAlert();
 		System.out.println(alertMsg);
 		driver.close();

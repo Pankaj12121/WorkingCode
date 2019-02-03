@@ -44,9 +44,9 @@ public class DataProviderWithExcel {
 	}	
 	@Test(dataProvider = "TC001DP",groups={"TestNG","demo","TC008","dataProviderWithExcel"})
 	public void f(String...obj) {
-		userName= driver.findElement(By.id("txtUsername"));//By id 
-		password= driver.findElement(By.name("txtPassword"));//By name 
-		submit= driver.findElement(By.className("button"));//By name 
+		userName= driver.findElement(By.name("userName"));//By id 
+		password= driver.findElement(By.name("password"));//By name 
+		submit= driver.findElement(By.name("login"));//By name 
 		userName.sendKeys(obj[1]);
 		System.out.println("Entered userName is "+ obj[1]);
 		password.sendKeys(obj[2]);
@@ -73,7 +73,7 @@ public class DataProviderWithExcel {
 		//ExcelUtils.setExcelFile("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1");
 		//sTestCaseName = configProp.getProperty("TCID");
 		//iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
-		Object[][] testObjArray = excelUtils.getTableArray("C:\\Users\\pankajs\\Desktop\\TestData.xlsx","Sheet1");
+		Object[][] testObjArray = excelUtils.getTableArray("E:\\TestData.xlsx","Sheet1");
 		System.out.println("Data provider fetched the data from excel for testCase "+ sTestCaseName);
 		return testObjArray;
 	}

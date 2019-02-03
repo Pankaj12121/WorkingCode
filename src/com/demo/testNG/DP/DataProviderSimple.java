@@ -34,14 +34,14 @@ public class DataProviderSimple {
 
 		System.setProperty("webdriver.gecko.driver","\\Grid\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
-		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
+		String baseUrl = "http://newtours.demoaut.com/";
 		driver.get(baseUrl);
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
-		userName= driver.findElement(By.id("txtUsername"));//By id 
-		password= driver.findElement(By.name("txtPassword"));//By name 
-		submit= driver.findElement(By.className("button"));//By name 
+		userName= driver.findElement(By.name("userName"));//By id 
+		password= driver.findElement(By.name("password"));//By name 
+		submit= driver.findElement(By.name("login"));//By name 
 
 		userName.sendKeys(sUsername);
 		password.sendKeys(sPassword);

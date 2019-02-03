@@ -7,9 +7,9 @@ public abstract class Instrument {
 	protected String name;
 
 	abstract public void play();
-	
-	protected void click(WebElement element){
-		
+
+	protected void click(WebElement element) {
+
 		System.out.println();
 	}
 

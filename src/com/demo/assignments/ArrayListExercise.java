@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ArrayListExercise implements Cloneable {
-
+	
 	public static void main(String[] args) {
 		List<String> list_Strings = new ArrayList<String>();
 		list_Strings.add("Red");

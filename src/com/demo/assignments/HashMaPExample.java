@@ -121,7 +121,7 @@ public class HashMaPExample {
 		hash_mapSP.put(4,"White");
 		hash_mapSP.put(5,"Blue");
 		// get value of key 3
-		String val=(String)hash_mapSP.get(3); 
+		String val=hash_mapSP.get(3); 
 		// check the value
 		System.out.println("Value for key 3 is: " + val);
 		// checking collection view of the map
