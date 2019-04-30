@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.demo.testNG.DP.DataProviderSimple">
+      <class name="com.demo.testNG.report.TestNGReport">
         <methods>
-          <include name="test" invocation-numbers="0 1"/>
+          <include name="LaunchBrowser"/>
+          <include name="m1"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.demo.testNG.DP.DataProviderSimple -->
+      </class> <!-- com.demo.testNG.report.TestNGReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
