@@ -5,7 +5,7 @@ package com.demo.variables;
 	// salary variable is visible in Student class only.
 	private int marks;
 
-	public  InstanceVariables(String StudName) {
+	public InstanceVariables(String StudName) {
 		this.name = StudName;	
 		
 	}
@@ -25,5 +25,6 @@ package com.demo.variables;
 		System.out.println("main method executed");
 	}
 }
+ 
 
 

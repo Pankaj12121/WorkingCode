@@ -1,5 +1,6 @@
 package com.demo.testNG.Random;
 
+import org.testng.ITestContext;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class GroupsInTestNG {
 	public void method1(){
 		System.out.println("method1");
 	}
-	@Test(groups="firstGroup")
+	@Test(groups= {"sanity","Regression","5,2,1"})
 	public void method2(){
 		System.out.println("method2");
 	}
@@ -34,6 +35,7 @@ public class GroupsInTestNG {
 	public void method5(){
 		System.out.println("if both group passed then method5 test will execute");
 	}
+	
 }
 
 

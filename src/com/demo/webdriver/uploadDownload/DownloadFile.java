@@ -26,11 +26,13 @@ public class DownloadFile {
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("prefs", prefs);
 		caps.setCapability(ChromeOptions.CAPABILITY, options);
-		System.setProperty("webdriver.chrome.driver", "\\Grid\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Grid\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver(caps);
 		driver.get("http://sample-videos.com/");
-		WebElement clickLink= driver.findElement(By.xpath("//a[contains(@href, 'video/mp4/720/big_buck_bunny_720p_1mb.mp4')]"));
-		clickLink.click();
+		WebElement mp4 = driver.findElement(By.xpath("//a[contains(@class,'active')]"));
+		mp4.click();
+		WebElement mp4click = driver.findElement(By.xpath("//div[@id='sample-mp4-video']/table/tbody/tr/td[4]/a[contains(@data,126)]"));
+		mp4click.click();
 		Thread.sleep(3000);
 		driver.close();
 	}

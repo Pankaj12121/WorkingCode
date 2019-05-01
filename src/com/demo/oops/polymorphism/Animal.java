@@ -19,5 +19,9 @@ public class Animal {
 	    {
 	        System.out.println("Meawoo");
 	    }
+	    private void print() {
+			// TODO Auto-generated method stub
+
+		}
 
 }

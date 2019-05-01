@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,7 +22,7 @@ public class DataProviderWithIterator {
 	WebElement submit;
 	String Uname;
 	String Pass;
-	@Test(dataProvider="DataInput",groups={"TestNG","demo","TC009","dataProviderWithIterator"})
+	//@Test(dataProvider="DataInput",groups={"TestNG","demo","TC009","dataProviderWithIterator"})
 	public void login(Object[][] obj) throws InterruptedException{
 		        
 		ArrayList<Object[]>testData=new ArrayList<Object[]>(Arrays.asList(obj));
@@ -60,7 +60,7 @@ public class DataProviderWithIterator {
 
 	}
 	
-	@DataProvider(name="DataInput")
+	/*@DataProvider(name="DataInput")
 	public Iterator<Object[][]> fetchData() throws IOException{
 		ArrayList<Object[][]> myData = new ArrayList<Object[][]>();
 		FileInputStream fis = new FileInputStream("C:\\Users\\pankajs\\Desktop\\TestData.xlsx");
@@ -78,7 +78,7 @@ public class DataProviderWithIterator {
 		}
 
 		return myData.iterator();
-	}
+	}*/
 }
 
 

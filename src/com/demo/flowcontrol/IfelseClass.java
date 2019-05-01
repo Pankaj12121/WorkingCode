@@ -7,9 +7,10 @@ public class IfelseClass {
 		 * plain if condition
 		 ***********************************/
 		int negativeNumber = -22;
+		
 		boolean isNumber = true;
 		int number = 0;
-		Double n1 = -1.0, n2 = 4.5, n3 = -5.3, largestNumber;
+		double n1 = -1.0, n2 = 4.5, n3 = -5.3, largestNumber;
 
 		if (isNumber)
 			System.out.println("It's a number");

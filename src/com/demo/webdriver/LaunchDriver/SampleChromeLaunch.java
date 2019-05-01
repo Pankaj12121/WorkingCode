@@ -6,17 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SampleChromeLaunch {
-	static WebDriver driver ;
+	 static WebDriver driver ;
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver","\\Grid\\chromedriver.exe");
 		driver = new ChromeDriver();
-		String baseUrl = "https://www.myntra.com/";
-		String expectedTitle = "OrangeHRM1";
+		String baseUrl = "http://newtours.demoaut.com/";  
+		String expectedTitle = "Find a Flight: Mercury Tours:";
 		String actualTitle = "";
 		driver.get(baseUrl);
 		
-		WebElement search= driver.findElement(By.xpath("//div[@id='desktop-header-cnt']//input"));
-		search.sendKeys("kurta");
 		
 		WebElement username= driver.findElement(By.name("userName"));
 		WebElement pass= driver.findElement(By.name("password"));

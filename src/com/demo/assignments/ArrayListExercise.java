@@ -1,4 +1,4 @@
-package com.demo.assignments;
+ package com.demo.assignments;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -144,6 +144,7 @@ public class ArrayListExercise implements Cloneable {
 		System.out.println("List before shuffling:\n" + list_StringsShuffle);  
 		Collections.shuffle(list_StringsShuffle);
 		System.out.println("List after shuffling:\n" + list_StringsShuffle); 
+		
 		/*----------------Reverse the collection-----------------------------------------------------*/
 		List<String> list_StringsReverse = new ArrayList<String>();
 		list_StringsReverse.add("Red");

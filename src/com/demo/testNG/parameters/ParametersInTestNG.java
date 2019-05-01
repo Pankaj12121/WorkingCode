@@ -13,7 +13,7 @@ public class ParametersInTestNG {
 	@Parameters({"password","Username"})
 	public void parameters(String password,String Username) {
 		
-		/*TestBaseSetup base= new TestBaseSetup();
+		TestBaseSetup base= new TestBaseSetup();
 		WebDriver driver = base.setDriver( browserNmae, appURL);
 			System.out.println("The current browser is "+browserNmae);
 		System.out.println("the platform is "+platform);
@@ -30,8 +30,8 @@ public class ParametersInTestNG {
 
 		userName.sendKeys("Admin");
 		password.sendKeys("admin");
-		submit.click();*/
-		/*try{
+		submit.click();
+		try{
 
 			WebElement errMsg= driver.findElement(By.xpath("//div[span='Invalid credentials']"));//By xpath
 			ActualErrMsg=errMsg.getText();
@@ -46,5 +46,5 @@ public class ParametersInTestNG {
 
 		driver.close();
 
-	}*/
+	}
 }}

@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="password" value="admin@123"/>
+  <parameter name="Username" value="admin"/>
+  <parameter name="Browser" value="Chrome"/>
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="parallel"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.demo.testNG.DP.DataProviderSimple">
+      <class name="com.demo.testNG.Random.ParallelExecution">
         <methods>
-          <include name="test" invocation-numbers="0 1"/>
+          <include name="m5"/>
+          <include name="m1"/>
+          <include name="m4"/>
+          <include name="m3"/>
+          <include name="m2"/>
         </methods>
-      </class> <!-- com.demo.testNG.DP.DataProviderSimple -->
+      </class> <!-- com.demo.testNG.Random.ParallelExecution -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

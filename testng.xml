@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="methods" thread-count="5">
+
+<parameter name="Browser" value="Chrome" />
+<parameter name="Username" value="admin" />
+<parameter name="password" value="admin@123" />
+
+
 	<test name="Test">
-		<parameter name="UserName" value="Admin" />
-		<parameter name="Password" value="admin" />
-		<parameter name="appURL" value="https://www.quora.com/" />
-		<parameter name="appURL1" value="https://docs.seleniumhq.org/download/" />
-		<parameter name="appURL2" value="http://newtours.demoaut.com/" />
-		<parameter name="appURL3" value="https://www.yahoo.com/" />
+		<groups>
+			<run>
+				<include name="parallel" />
+			</run>
+		</groups>
 		<packages>
 			<package name="com.demo.*" />
 		</packages>

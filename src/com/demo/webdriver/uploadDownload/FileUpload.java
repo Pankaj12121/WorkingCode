@@ -17,20 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.demo.datadriven.ExtractToList;
 
 public class FileUpload {
-	private WebElement empFirstName;
-	private WebElement empMiddleName;
-	private WebElement empLastName;
-	private WebElement empID;
-	private WebElement uploadFile;
-	private WebElement empLoginDetailsChkBox;
-	private WebElement empSubmit;
-	private WebElement empUserName;
-	private WebElement empUserPass;
-	private WebElement empUserPassConfirm;
-	private WebElement empStatus;
-	private WebElement userName;
-	private WebElement password;
-	private WebElement submit;
+
 	private static WebElement pimMenu;
 	private static WebElement AddEmployee;
 	static WebDriver driver;
@@ -52,7 +39,7 @@ public class FileUpload {
 		
 		System.setProperty("webdriver.chrome.driver","\\Grid\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver(capabilities);
-		String baseUrl = "http://opensource.demo.orangehrmlive.com/";
+		String baseUrl = "http://www.newtours.demoaut.com/";
 		driver.get(baseUrl);
 		
 		FileUpload fileUploadObj= new FileUpload(driver);
@@ -61,6 +48,10 @@ public class FileUpload {
 		fileUploadObj.pageElements(driver);
 		fileUploadObj.fillempDetails();
 
+	}
+	private void fillempDetails() {
+		// TODO Auto-generated method stub
+		
 	}
 	public int randomIntGen(){
 		Random rand = new Random(); 
@@ -74,38 +65,50 @@ public class FileUpload {
 	}
 	
 	public FileUpload(WebDriver driver){
-		userName= driver.findElement(By.id("txtUsername"));//By id 
-		password= driver.findElement(By.name("txtPassword"));//By name 
-		submit= driver.findElement(By.className("button"));//By name 	
+		String userName= driver.findElement(By.name("username"));//By id 
+		String password= driver.findElement(By.name("password"));//By name 
+		String submit= driver.findElement(By.name("login"));//By name 	
 	}
 	public void pageElements(WebDriver driver){
-		empFirstName= driver.findElement(By.name("firstName"));
-		empMiddleName= driver.findElement(By.name("middleName"));
-		empLastName= driver.findElement(By.name("lastName"));
-		empID= driver.findElement(By.name("employeeId"));
-		uploadFile= driver.findElement(By.name("photofile"));
-		empLoginDetailsChkBox= driver.findElement(By.name("chkLogin"));
-		empSubmit= driver.findElement(By.id("btnSave"));
-		empUserName= driver.findElement(By.name("user_name"));
-		empUserPass= driver.findElement(By.name("user_password"));
-		empUserPassConfirm= driver.findElement(By.name("re_password"));
-		empStatus= driver.findElement(By.name("status"));
+		
+		
+		String empFirstName= driver.findElement(By.name("firstName"));
+		String empMiddleName= driver.findElement(By.name("middleName"));
+		String empLastName= driver.findElement(By.name("lastName"));
+		String empID= driver.findElement(By.name("employeeId"));
+		String uploadFile= driver.findElement(By.name("photofile"));
+		String empLoginDetailsChkBox= driver.findElement(By.name("chkLogin"));
+		String empSubmit= driver.findElement(By.id("btnSave"));
+		String empUserName= driver.findElement(By.name("user_name"));
+		String empUserPass= driver.findElement(By.name("user_password"));
+		String empUserPassConfirm= driver.findElement(By.name("re_password"));
+		String empStatus= driver.findElement(By.name("status"));
 		
 	}
 	public void fillempDetails(){
+		WebElement empFirstName;
 		empFirstName.sendKeys(randomStringGen());
+		WebElement empMiddleName;
 		empMiddleName.sendKeys(randomStringGen());
+		WebElement empLastName;
 		empLastName.sendKeys(randomStringGen());
 		empIDs=randomIntGen();
 		String IDs=String.valueOf(empIDs);
+		WebElement empID;
 		empID.sendKeys(IDs);
+		WebElement uploadFile;
 		uploadFile.sendKeys(filetobeUploaded);
+		WebElement empLoginDetailsChkBox;
 		empLoginDetailsChkBox.click();
+		WebElement empUserName;
 		empUserName.sendKeys(randomStringGen());
 		Password=randomStringGen();
+		WebElement empUserPass;
 		empUserPass.sendKeys(Password);
+		WebElement empUserPassConfirm;
 		empUserPassConfirm.sendKeys(Password);
 		dropDownItemSelect(empStatus,"Enabled");
+		WebElement empSubmit;
 		empSubmit.click();
 		
 	}
@@ -136,9 +139,9 @@ public class FileUpload {
 		ArrayList<ArrayList<Object>> testData= new ArrayList<ArrayList<Object>>();
 		testData=dataList.extractAsLists();
 		for (int k=0;k<=testData.size()-1;k++){
-		userName= driver.findElement(By.id("txtUsername"));//By id 
-		password= driver.findElement(By.name("txtPassword"));//By name 
-		submit= driver.findElement(By.className("button"));//By name 	
+		WebElement userName = driver.findElement(By.name("userName"));//By id 
+		WebElement password = driver.findElement(By.name("password"));//By name 
+		WebElement submit = driver.findElement(By.name("login"));//By name 	
 		userName.sendKeys(testData.get(k).get(1).toString());
 		password.sendKeys(testData.get(k).get(2).toString());
 		submit.click();

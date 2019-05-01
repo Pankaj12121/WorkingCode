@@ -9,7 +9,7 @@ import com.demo.webdriver.implicitExplicitWait.BaseScript;
 public class DriverNavigate {
 	String browserCloseFalse;
 	/*------level1-----------*/
-	By adminMenu,pim,leave,time,recruitment,performance,dashboard,directory;
+	 private By adminMenu,pim,leave,time,recruitment,performance,dashboard,directory;
 
 	/*------level2-----------*/
 	By userMgmt,job,organization,qualifications,nationalities,configuration;//Admin menu

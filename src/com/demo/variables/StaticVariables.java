@@ -1,9 +1,10 @@
-package com.demo.variables;
+ package com.demo.variables;
 
 public class StaticVariables {
 	int rollno;  
 	String name;  
 	static String college ="ITS"; 
+	String address = "Pune";
 	
 
 	public StaticVariables(int r,String n){  
@@ -24,6 +25,8 @@ public class StaticVariables {
 		s1.display();  
 		s2.display();  
 	}  
+	
+	
 }  
 
 

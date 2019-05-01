@@ -14,6 +14,8 @@ public class ProtectedMethod {
 		  ProtectedMethod proMethod= new ProtectedMethod();
 		  proMethod.userNameDisplay();
 		  proMethod.passwordDisplay();
+		  
+		 
 		
 	}
 

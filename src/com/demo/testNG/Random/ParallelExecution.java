@@ -17,8 +17,8 @@ import org.testng.annotations.Test;
 public class ParallelExecution {
 	public WebDriver driver;
 	@Test(groups="parallel")
-	public void m1() {
-		driver.get("https://www.amazon.com/");
+	public void m1() throws c {
+		driver=returnwd("https://www.flipkart.com/");
 		driver.manage().timeouts().implicitlyWait(17, TimeUnit.SECONDS);
 		String title = driver.getTitle();
 		System.out.println(title);
@@ -64,7 +64,7 @@ public class ParallelExecution {
 	}
 	
 	@BeforeTest(groups="parallel")
-	public WebDriver returnwd() throws MalformedURLException {
+	public WebDriver returnwd(String URL) throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities().chrome();
 
 		ChromeOptions options = new ChromeOptions();
@@ -81,6 +81,7 @@ public class ParallelExecution {
 		capabilities.setCapability(ChromeOptions.CAPABILITY,options);
 		String gridURL="http://localhost:4444/wd/hub";
 		driver = new RemoteWebDriver(new URL(gridURL), capabilities);
+		driver.get(URL);
 		return driver;
 	}
 

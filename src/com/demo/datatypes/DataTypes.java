@@ -1,4 +1,4 @@
-package com.demo.datatypes;
+   package com.demo.datatypes;
 
 public class DataTypes {
 	public static void main(String[] args) {

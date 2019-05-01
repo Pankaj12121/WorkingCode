@@ -1,73 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="password" value="admin@123"/>
+  <parameter name="Username" value="admin"/>
+  <parameter name="Browser" value="Chrome"/>
   <test name="Test(failed)">
-    <parameter name="UserName" value="Admin"/>
-    <parameter name="appURL3" value="https://www.yahoo.com/"/>
-    <parameter name="appURL2" value="http://newtours.demoaut.com/"/>
-    <parameter name="appURL" value="https://www.quora.com/"/>
-    <parameter name="appURL1" value="https://docs.seleniumhq.org/download/"/>
-    <parameter name="Password" value="admin"/>
+    <groups>
+      <run>
+        <include name="parallel"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.demo.testNG.Random.ParallelExecutionInTestNG1">
+      <class name="com.demo.testNG.Random.ParallelExecution">
         <methods>
-          <include name="mozillaTest"/>
-          <include name="chromeTest"/>
+          <include name="m5"/>
+          <include name="m1"/>
+          <include name="m4"/>
+          <include name="m3"/>
+          <include name="m2"/>
         </methods>
-      </class> <!-- com.demo.testNG.Random.ParallelExecutionInTestNG1 -->
-      <class name="com.demo.testNG.parameters.ParametersInTestNG">
-        <methods>
-          <include name="parameters"/>
-        </methods>
-      </class> <!-- com.demo.testNG.parameters.ParametersInTestNG -->
-      <class name="com.demo.testNG.DP.DataProviderWithIterator">
-        <methods>
-          <include name="login" invocation-numbers="0 1 2 3 4 5 6"/>
-        </methods>
-      </class> <!-- com.demo.testNG.DP.DataProviderWithIterator -->
-      <class name="com.demo.testNG.parameters.ParallelTest">
-        <methods>
-          <include name="test4" invocation-numbers="0"/>
-          <include name="test5" invocation-numbers="0"/>
-          <include name="test6" invocation-numbers="0"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.demo.testNG.parameters.ParallelTest -->
-      <class name="com.demo.testNG.DP.DataProviderSimple">
-        <methods>
-          <include name="test" invocation-numbers="0 1"/>
-        </methods>
-      </class> <!-- com.demo.testNG.DP.DataProviderSimple -->
-      <class name="com.demo.testNG.DP.DataProviderWithExcel">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="f" invocation-numbers="0 1 2"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.demo.testNG.DP.DataProviderWithExcel -->
-      <class name="com.demo.testNG.Random.TimeOutInTestNG">
-        <methods>
-          <include name="thisTestShouldFail"/>
-        </methods>
-      </class> <!-- com.demo.testNG.Random.TimeOutInTestNG -->
-      <class name="com.demo.assignments.DataProviderWithExcelTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="f"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.demo.assignments.DataProviderWithExcelTest -->
-      <class name="com.demo.testNG.Random.RunTimeExceptionInTestNG">
-        <methods>
-          <include name="withoutException"/>
-        </methods>
-      </class> <!-- com.demo.testNG.Random.RunTimeExceptionInTestNG -->
-      <class name="com.demo.testNG.AssertVsVerify.AssertVsVerify">
-        <methods>
-          <include name="testNG"/>
-          <include name="GenReport"/>
-        </methods>
-      </class> <!-- com.demo.testNG.AssertVsVerify.AssertVsVerify -->
+      </class> <!-- com.demo.testNG.Random.ParallelExecution -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

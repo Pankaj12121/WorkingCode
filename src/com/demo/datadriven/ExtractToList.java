@@ -1,6 +1,7 @@
 package com.demo.datadriven;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,12 +14,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExtractToList {
 	
-	public static void main(String[] args) {
-		
-		ExtractToList ex= new ExtractToList();
-		ex.extractAsLists();
-		
-	}
 
 	
 	public  ArrayList<ArrayList<Object>> extractAsLists(){
@@ -26,7 +21,7 @@ public class ExtractToList {
 		ArrayList<ArrayList<Object>> list = new ArrayList<ArrayList<Object>>();
 		int maxDataCount =0;
 		try{
-			FileInputStream file = new FileInputStream("C:\\Users\\pankajs\\Desktop\\TestData.xlsx");
+			FileInputStream file = new FileInputStream("C:\\Users\\HP\\Desktop\\TestData.xlsx");
 			// Create Workbook instance holding reference to .xlsx file
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 			// Get first/desired sheet from the workbook
@@ -52,6 +47,7 @@ public class ExtractToList {
 				// For each row, iterate through all the columns
 				for(int cn=0; cn<maxDataCount; cn++) {
 					Cell cell = row.getCell(cn, Row.CREATE_NULL_AS_BLANK);
+					
 					switch (cell.getCellType()) {
 					case Cell.CELL_TYPE_NUMERIC:
 						if(DateUtil.isCellDateFormatted(cell)){
@@ -68,6 +64,10 @@ public class ExtractToList {
 				}
 				list.add(singleRows);
 			}
+			FileOutputStream fos= new FileOutputStream("c://xyz.xlsx");
+					fos.close();
+			workbook.close();
+			
 			file.close();
 			workbook.close();   
 		} catch (Exception e) {  e.printStackTrace();}

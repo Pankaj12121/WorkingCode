@@ -19,8 +19,10 @@ public class StaticAndInstanceBlock {
 	}
 
 	public static void main(String args[]){
+	
 		StaticAndInstanceBlock c1=new StaticAndInstanceBlock();
 	}    
+
 }
 
-
+     

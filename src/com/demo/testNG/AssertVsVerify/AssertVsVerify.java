@@ -31,14 +31,14 @@ public class AssertVsVerify {
 		WebElement contactUS= driver.findElement(By.xpath("//div[1]/ul/li/a"));
 		String ActualWelcomeUser= contactUS.getText();
 		try{
-			//verify(actualTitle, expectedTitle);
+			verify(actualTitle, expectedTitle);
 
-			//verify(ActualWelcomeUser, ExpectedWelcomeUser);
+			verify(ActualWelcomeUser, ExpectedWelcomeUser);
 			/* ....................................Verify Vs Assert.........................................................	*/
 
-			//hardAssert(ActualWelcomeUser, ExpectedWelcomeUser);
+			hardAssert(ActualWelcomeUser, ExpectedWelcomeUser);
 
-			//hardAssert(actualTitle, expectedTitle);
+			hardAssert(actualTitle, expectedTitle);
 
 			softAssert(ActualWelcomeUser, ExpectedWelcomeUser);
 

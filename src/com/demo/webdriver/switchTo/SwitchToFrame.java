@@ -86,7 +86,7 @@ public class SwitchToFrame {
 	public void defaulframesecondTime(){
 		String cssText= "Test case 0001";
 		WebElement css=driver.findElement(By.name("customStylesheet"));
-		css.sendKeys("Test case 0001");
+		css..sendKeys("Test case 0001");
 		System.out.println("driver in default frame second time and typed text ->"+ cssText);
 	}
 	

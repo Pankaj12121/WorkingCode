@@ -21,6 +21,9 @@ public class ImplementationClassVariables {
 		StaticVariables staticVar= new StaticVariables(rollNo,studentName);
 		String collegeName=StaticVariables.college + " cambridge, UK";
 		staticVar.display(collegeName);
+		String college = StaticVariables.college;
+		System.out.println("college name" +college);
+		
 		
 	}
 }

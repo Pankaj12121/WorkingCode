@@ -21,4 +21,6 @@ public class ElectricGuitar extends StringInstrument{
 		System.out.println("An electric " + numberOfStrings + "-string " + name
 				+ " is rocking!");
 	}
+	
+	
 }

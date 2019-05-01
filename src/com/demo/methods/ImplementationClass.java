@@ -21,13 +21,5 @@ public class ImplementationClass{
 		
 		
 		
-		
-		int name1=StaticMethod.averageLength("Ferdous", "Amin");
-		int name2=StaticMethod.totalLength("Pankaj", "Yogi");
-		
-		System.out.println(name1);
-		
-		System.out.println(name2);
-		
 	}
 }
