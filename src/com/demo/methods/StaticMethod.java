@@ -1,4 +1,4 @@
-package com.demo.methods;
+ package com.demo.methods;
 
 public class StaticMethod {
 

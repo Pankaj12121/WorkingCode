@@ -12,7 +12,7 @@ public class ReturnMethods {
 		return monthlySalary = 350000;
 	}
 
-	static boolean getJobStatus() {
+	static bo olean getJobStatus() {
 		return true;
 	}
 

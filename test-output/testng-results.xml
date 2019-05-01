@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="26" total="27" passed="1">
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+>>>>>>> d38b64bf09683a98e4f74db7323d39b95b40d241
   <reporter-output>
+    <line>
+      <![CDATA[Navigated to UrbanPro Site]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Navigation button]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login button]]>
+    </line>
+    <line>
+      <![CDATA[<a href='E:\Grid\TestRunReport\SnapShotOfFailedScenarios\_15.54.58.png'> <img src='file://E:\Grid\TestRunReport\SnapShotOfFailedScenarios\_15.54.58.png' height='300' width='500'/> </a>]]>
+    </line>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Suite" duration-ms="74" started-at="2019-03-31T05:52:48Z" finished-at="2019-03-31T05:52:48Z">
     <groups>
       <group name="firstGroup">
@@ -17,4 +34,41 @@
       </class> <!-- com.demo.testNG.Random.GroupsInTestNG -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
+=======
+  <suite name="Default suite" duration-ms="23309" started-at="2019-04-03T10:24:35Z" finished-at="2019-04-03T10:24:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="23309" started-at="2019-04-03T10:24:35Z" finished-at="2019-04-03T10:24:59Z">
+      <class name="com.demo.testNG.report.TestNGReport">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.demo.testNG.report.TestNGReport@464bee09]" name="setup" is-config="true" duration-ms="0" started-at="2019-04-03T15:54:35Z" finished-at="2019-04-03T15:54:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3ad83a66]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="m1()[pri:0, instance:com.demo.testNG.report.TestNGReport@464bee09]" name="m1" duration-ms="23291" started-at="2019-04-03T15:54:35Z" finished-at="2019-04-03T15:54:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Navigated to UrbanPro Site]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Navigation button]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login button]]>
+            </line>
+            <line>
+              <![CDATA[<a href='E:\Grid\TestRunReport\SnapShotOfFailedScenarios\_15.54.58.png'> <img src='file://E:\Grid\TestRunReport\SnapShotOfFailedScenarios\_15.54.58.png' height='300' width='500'/> </a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- m1 -->
+      </class> <!-- com.demo.testNG.report.TestNGReport -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> d38b64bf09683a98e4f74db7323d39b95b40d241
 </testng-results>

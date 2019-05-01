@@ -26,7 +26,7 @@ public class StaticVariables {
 		s2.display();  
 	}  
 	
-	
+	 
 }  
 
 

@@ -11,6 +11,7 @@
       </run>
     </groups>
     <classes>
+<<<<<<< HEAD
       <class name="com.demo.testNG.Random.ParallelExecution">
         <methods>
           <include name="m5"/>
@@ -20,6 +21,15 @@
           <include name="m2"/>
         </methods>
       </class> <!-- com.demo.testNG.Random.ParallelExecution -->
+=======
+      <class name="com.demo.testNG.report.TestNGReport">
+        <methods>
+          <include name="LaunchBrowser"/>
+          <include name="m1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.demo.testNG.report.TestNGReport -->
+>>>>>>> d38b64bf09683a98e4f74db7323d39b95b40d241
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

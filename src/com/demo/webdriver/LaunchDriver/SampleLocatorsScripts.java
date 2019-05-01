@@ -1,7 +1,10 @@
 package com.demo.webdriver.LaunchDriver;
+<<<<<<< HEAD
 
 import java.net.MalformedURLException;
 import java.net.URL;
+=======
+>>>>>>> d38b64bf09683a98e4f74db7323d39b95b40d241
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

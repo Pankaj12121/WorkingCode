@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.demo.testNG.DP.DataProviderWithExcel">
         <methods>
           <include name="beforeMethod"/>
@@ -10,6 +11,15 @@
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.demo.testNG.DP.DataProviderWithExcel -->
+=======
+      <class name="com.demo.testNG.report.TestNGReport">
+        <methods>
+          <include name="LaunchBrowser"/>
+          <include name="m1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.demo.testNG.report.TestNGReport -->
+>>>>>>> d38b64bf09683a98e4f74db7323d39b95b40d241
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
